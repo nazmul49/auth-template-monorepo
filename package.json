@@ -1,0 +1,22 @@
+{
+  "name": "auth-template-monorepo",
+  "version": "1.0.0",
+  "license": "ISC",
+  "description": "This is a template auth app with monorepo structure",
+  "author": "Nazmul Hasan",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:server": "npm run build -w server",
+    "build:client": "npm run build -w client",
+    "start": "npm run start -w server",
+    "start:prod": "cd server && npm run start:prod",
+    "start:server": "npm run start:watch -w server",
+    "start:client": "npm run build:watch -w client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ]
+}
